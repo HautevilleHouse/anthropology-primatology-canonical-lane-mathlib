@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.AnthropologyPrimatologyCanonicalLaneLean.PrimatePhylogenetics
+import HautevilleHouse.AnthropologyPrimatologyCanonicalLaneLean.PrimateSocialBehavior
+import HautevilleHouse.AnthropologyPrimatologyCanonicalLaneLean.PrimateCognition
+import HautevilleHouse.AnthropologyPrimatologyCanonicalLaneLean.PrimateToolUse
+import HautevilleHouse.AnthropologyPrimatologyCanonicalLaneLean.PrimateEcologicalNiche
+
+namespace HautevilleHouse
+namespace AnthropologyPrimatologyCanonicalLaneLean
+
+def ConstrainedPrimatologyClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_primatology_endgame (A : AdmissibleClass) :
+    ConstrainedPrimatologyClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end AnthropologyPrimatologyCanonicalLaneLean
+end HautevilleHouse
